@@ -551,7 +551,7 @@ class Parser {
 				throw new UnexpectedTokenException($mValue, $this->peek(max($iLength, 5)), $this->iLineNo);
 			}
 			$this->iLineNo += $iLineCount;
-			$this->iCurrentPosition += $this->strlen($mValue);
+			$this->iCurrentPosition += $iLength;
 			return $mValue;
 		} else {
 			if ($this->iCurrentPosition + $mValue > $this->iLength) {
